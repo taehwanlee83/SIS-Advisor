@@ -39,8 +39,8 @@ git clone https://github.com/taehwanlee83/SIS-Advisor.git
 cd SIS-advisor
 ```
 2. Adjust the number of repetition, `MAX_ITER`, (default: 100) before you run.
-Starting with less than 10 is *strongly* recommended since it will take some time for each repetition depending on your running environment.
-Check the code cautiously, since it will run *a lot of* fitting process until it ends.
+Starting with less than 10 is *STRONGLY* recommended since it will take some time for each repetition depending on your running environment.
+Check the code cautiously, since it will run *A LOT OF* fitting process until it ends.
 
 4. Run the main script:
 ```
@@ -55,7 +55,7 @@ python code/Automated_SSB+IMB.py
 
 - This repository includes processed simulation outputs (CSV format) used in the paper.
 
-- Note: The original K-SPICE® simulation model cannot be distributed due to licensing restrictions. MCL files on data directory are only applicable if you have a proper license and S/W of K-SPICE.
+- Note: The original K-SPICE® simulation model cannot be distributed due to licensing restrictions. MCL (Model Control Language) files on data directory are only applicable if you have a proper license and S/W of K-SPICE.
 
 - However, the provided CSV files and scripts are sufficient to fully reproduce the results reported in the paper.
 
