@@ -54,7 +54,7 @@ python code/Automated_SSB+IMB.py
 
 - This repository includes processed simulation outputs (CSV format) used in the paper.
 
-- Note: The original K-SPICE® simulation model cannot be distributed due to licensing restrictions.
+- Note: The original K-SPICE® simulation model cannot be distributed due to licensing restrictions. MCL files on data directory are only applicable when you have a proper license and S/W of K-SPICE.
 
 - However, the provided CSV files and scripts are sufficient to fully reproduce the results reported in the paper.
 
