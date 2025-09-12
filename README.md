@@ -44,7 +44,7 @@ Check the code cautiously, since it will run *A LOT OF* fitting process until it
 
 4. Run the main script:
 ```
-python code/Automated_SSB+IMB.py
+python3 code/Automated_SSB+IMB.py
 ```
 
 4. The script will generate `exp_result.csv` in the project root
