@@ -1,0 +1,5 @@
+// Sep gas outlet plugging
+RunStep(0)
+wait(550)
+ramp({23ESV0002_pf:Plugging}, 90, 600, 1)
+

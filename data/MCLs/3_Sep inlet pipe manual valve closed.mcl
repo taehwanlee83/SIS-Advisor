@@ -1,0 +1,6 @@
+// Sep inlet manual valve closed: 25HV0001/0002:TargetPosition
+
+RunStep(0)
+wait(150)
+{25HV0001:TargetPosition} = 0.1
+{25HV0002:TargetPosition} = 0.1

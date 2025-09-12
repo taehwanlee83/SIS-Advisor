@@ -1,0 +1,243 @@
+* This panel file has been created automatically
+* by the SaveCustomTrend DPI extension.
+
+set variable=WINDOW_TITLE,%PANEL_NAME;
+set variable=TREND_TITLE,"All sensors available";
+set variable=TIME_AXIS,"Time";
+
+#define TTITLE %PANEL_NAME
+set variable=MTP_NAME,%PANEL_PATH;
+
+#include $EXPLORER_RESOURCES/panel/custom_trend_header.def
+
+stub frame=-1; size=1,250;
+
+dataset \
+	colour="Blue"; \
+	id=111; \
+	label="Overflow liquid"; \
+	name="23LT0001:MeasuredValue"; \
+	tag="23LT0001:MeasuredValue"; \
+	usertag="23LT0001:MeasuredValue"; \
+	yaxis=0,100; \
+	ygroup="Level"; \
+	ytitle="mm"; \
+
+dataset \
+	colour="Green2"; \
+	id=112; \
+	label="Water level"; \
+	name="23LT0002:MeasuredValue"; \
+	tag="23LT0002:MeasuredValue"; \
+	usertag="23LT0002:MeasuredValue"; \
+	yaxis=0,100; \
+	ygroup="Level"; \
+	ytitle="mm"; \
+
+dataset \
+	colour="Red"; \
+	id=113; \
+	label="Sep Pressure"; \
+	name="23PT0001:MeasuredValue"; \
+	tag="23PT0001:MeasuredValue"; \
+	usertag="23PT0001:MeasuredValue"; \
+	yaxis=0,100; \
+	ygroup="Pressure"; \
+	ytitle="barg"; \
+
+dataset \
+	colour="Magenta"; \
+	id=114; \
+	label="Comp inlet pressure"; \
+	name="23PT0002:MeasuredValue"; \
+	tag="23PT0002:MeasuredValue"; \
+	usertag="23PT0002:MeasuredValue"; \
+	yaxis=0,100; \
+	ygroup="Pressure"; \
+	ytitle="barg"; \
+
+dataset \
+	colour="Yellow3"; \
+	id=115; \
+	label="Comp outlet pressure"; \
+	name="23PT0003:MeasuredValue"; \
+	tag="23PT0003:MeasuredValue"; \
+	usertag="23PT0003:MeasuredValue"; \
+	yaxis=0,100; \
+	ygroup="Pressure"; \
+	ytitle="barg"; \
+
+dataset \
+	colour="Cyan3"; \
+	id=116; \
+	label="Comp vol flow rate"; \
+	name="23FE0001:VolumeFlow"; \
+	tag="23FE0001:VolumeFlow"; \
+	usertag="23FE0001:VolumeFlow"; \
+	yaxis=0,10000; \
+	ygroup="Vol Flow Rate"; \
+	ytitle="m3/h"; \
+
+dataset \
+	colour="Orange"; \
+	id=117; \
+	label="Scrubber outlet temp"; \
+	name="23TT0003:MeasuredValue"; \
+	tag="23TT0003:MeasuredValue"; \
+	usertag="23TT0003:MeasuredValue"; \
+	yaxis=0,100; \
+	ygroup="Temperature"; \
+	ytitle="C"; \
+
+dataset \
+	colour="Purple"; \
+	id=118; \
+	label="23LT0001:AlarmHighHigh"; \
+	name="23LT0001:AlarmHighHigh"; \
+	tag="23LT0001:AlarmHighHigh"; \
+	MID="/Tutorial/ProcessModel"; \
+	usertag="23LT0001:AlarmHighHigh"; \
+	yaxis=0,100; \
+	ygroup="Alarm"; \
+
+dataset \
+	colour="Seagreen"; \
+	id=119; \
+	label="23LT0001:AlarmLowLow"; \
+	name="23LT0001:AlarmLowLow"; \
+	tag="23LT0001:AlarmLowLow"; \
+	MID="/Tutorial/ProcessModel"; \
+	usertag="23LT0001:AlarmLowLow"; \
+	yaxis=0,100; \
+	ygroup="Alarm"; \
+
+dataset \
+	colour="Deepskyblue"; \
+	id=120; \
+	label="23LT0001:AlarmHigh"; \
+	name="23LT0001:AlarmHigh"; \
+	tag="23LT0001:AlarmHigh"; \
+	MID="/Tutorial/ProcessModel"; \
+	usertag="23LT0001:AlarmHigh"; \
+	yaxis=0,100; \
+	ygroup="Alarm"; \
+
+dataset \
+	colour="Pink2"; \
+	id=121; \
+	label="23LT0001:AlarmLow"; \
+	name="23LT0001:AlarmLow"; \
+	tag="23LT0001:AlarmLow"; \
+	MID="/Tutorial/ProcessModel"; \
+	usertag="23LT0001:AlarmLow"; \
+	yaxis=0,100; \
+	ygroup="Alarm"; \
+
+dataset \
+	colour="Default"; \
+	id=122; \
+	label="23LT0002:AlarmHighHigh"; \
+	name="23LT0002:AlarmHighHigh"; \
+	tag="23LT0002:AlarmHighHigh"; \
+	MID="/Tutorial/ProcessModel"; \
+	usertag="23LT0002:AlarmHighHigh"; \
+	yaxis=0,100; \
+	ygroup="Alarm"; \
+
+dataset \
+	colour="Default"; \
+	id=123; \
+	label="23LT0002:AlarmHigh"; \
+	name="23LT0002:AlarmHigh"; \
+	tag="23LT0002:AlarmHigh"; \
+	MID="/Tutorial/ProcessModel"; \
+	usertag="23LT0002:AlarmHigh"; \
+	yaxis=0,100; \
+	ygroup="Alarm"; \
+
+dataset \
+	colour="Default"; \
+	id=124; \
+	label="23LT0002:AlarmLow"; \
+	name="23LT0002:AlarmLow"; \
+	tag="23LT0002:AlarmLow"; \
+	MID="/Tutorial/ProcessModel"; \
+	usertag="23LT0002:AlarmLow"; \
+	yaxis=0,100; \
+	ygroup="Alarm"; \
+
+dataset \
+	colour="Default"; \
+	id=125; \
+	label="23LT0002:AlarmLowLow"; \
+	name="23LT0002:AlarmLowLow"; \
+	tag="23LT0002:AlarmLowLow"; \
+	MID="/Tutorial/ProcessModel"; \
+	usertag="23LT0002:AlarmLowLow"; \
+	yaxis=0,100; \
+	ygroup="Alarm"; \
+
+dataset \
+	colour="Default"; \
+	id=126; \
+	label="23PT0001:AlarmHighHigh"; \
+	name="23PT0001:AlarmHighHigh"; \
+	tag="23PT0001:AlarmHighHigh"; \
+	MID="/Tutorial/ProcessModel"; \
+	usertag="23PT0001:AlarmHighHigh"; \
+	yaxis=0,1; \
+	ygroup="Alarm"; \
+
+dataset \
+	colour="Default"; \
+	id=127; \
+	label="23PT0001:AlarmHigh"; \
+	name="23PT0001:AlarmHigh"; \
+	tag="23PT0001:AlarmHigh"; \
+	MID="/Tutorial/ProcessModel"; \
+	usertag="23PT0001:AlarmHigh"; \
+	yaxis=0,1; \
+	ygroup="Alarm"; \
+
+dataset \
+	colour="Default"; \
+	id=128; \
+	label="23PT0001:AlarmLow"; \
+	name="23PT0001:AlarmLow"; \
+	tag="23PT0001:AlarmLow"; \
+	MID="/Tutorial/ProcessModel"; \
+	usertag="23PT0001:AlarmLow"; \
+	yaxis=0,2; \
+	ygroup="Alarm"; \
+
+dataset \
+	colour="Default"; \
+	id=129; \
+	label="23PT0001:AlarmLowLow"; \
+	name="23PT0001:AlarmLowLow"; \
+	tag="23PT0001:AlarmLowLow"; \
+	MID="/Tutorial/ProcessModel"; \
+	usertag="23PT0001:AlarmLowLow"; \
+	yaxis=0,1; \
+	ygroup="Alarm"; \
+
+display \
+	background=white,gray98; \
+	foreground=black; \
+	id=100; \
+	autofit=y; \
+	dataset="23LT0001:MeasuredValue","23LT0002:MeasuredValue","23PT0001:MeasuredValue","23PT0002:MeasuredValue","23PT0003:MeasuredValue","23FE0001:VolumeFlow","23TT0003:MeasuredValue","23LT0001:AlarmHighHigh","23LT0001:AlarmLowLow","23LT0001:AlarmHigh","23LT0001:AlarmLow","23LT0002:AlarmHighHigh","23LT0002:AlarmHigh","23LT0002:AlarmLow","23LT0002:AlarmLowLow","23PT0001:AlarmHighHigh","23PT0001:AlarmHigh","23PT0001:AlarmLow","23PT0001:AlarmLowLow"; \
+	grid=x,y,gray; \
+	timeaxis=600; \
+	title="%TREND_TITLE"; \
+	type=trend; \
+	xtitle="%TIME_AXIS"; \
+	yaxis=bygroup; \
+
+
+set variable=TSET,"10.000000";
+set variable=YPIC,"";
+
+#ifdef '"%_MODIFY" == "yes"'
+#include $EXPLORER_RESOURCES/panel/custom_trend_settings.pnl
+#endif

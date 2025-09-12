@@ -1,0 +1,5 @@
+// Gas outlet leak
+
+RunStep(0)
+wait(600)
+ramp({pv_23L0003:DiameterLeak}, 110, 600, 0.1)

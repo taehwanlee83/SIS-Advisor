@@ -1,0 +1,18 @@
+//forlist ( {$top@name(*)@type(AlarmTransmitter)@B_n_lst},TransmitterName )
+//	EnableHistory ("<TransmitterName>:Value")
+//	EnableHistory ("<TransmitterName>:MeasuredValue")
+//end
+//forlist ( {$top@name(*)@type(PipeFlow)@B_n_lst},pfName )
+//	EnableHistory ("<pfName>:Flowrate")
+//end
+//forlist ( {$top@name(*)@type(ControlValve)@B_n_lst},cvName )
+//	EnableHistory ("<cvName>:ValveStemPosition")
+//end
+//forlist ( {$top@name(*)@type(BlockValve)@B_n_lst},bvName )
+//	EnableHistory ("<bvName>:ValveStemPosition")
+//end
+
+
+//Pause(0)
+LoadConditions("Simulation_startingpoint","/Tutorial")
+SetSpeed(50)

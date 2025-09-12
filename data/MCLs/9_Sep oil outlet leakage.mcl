@@ -1,0 +1,6 @@
+// Sep oil outlet leakage
+// Issue: all oil left on the separator will be gone since there is no SDV on the outlet side. 23MV0003 has been replaced with 23ESV0003 to avoid this.
+
+RunStep(0)
+wait(500)
+ramp({pv_23MV0003:DiameterLeak}, 100, 1200, 0.1)

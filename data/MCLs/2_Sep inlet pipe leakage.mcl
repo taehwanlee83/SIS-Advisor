@@ -1,0 +1,5 @@
+// Inlet pipeline leakage: pv_25L0001:DiameterLeak
+//
+RunStep(0)
+wait(100)
+ramp({pv_25L0001:DiameterLeak}, 150, 600, 0.5)

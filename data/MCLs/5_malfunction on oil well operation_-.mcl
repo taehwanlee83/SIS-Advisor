@@ -1,0 +1,9 @@
+// Malfunction on oil well operation (-)
+
+RunStep(0)
+wait(250)
+for(360)
+	{Feed1:InputPressure} = {Feed1:InputPressure} - 0.1
+	{Feed2:InputPressure} = {Feed2:InputPressure} - 0.1
+	wait(1)
+end

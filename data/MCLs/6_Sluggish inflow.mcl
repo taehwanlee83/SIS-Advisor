@@ -1,0 +1,13 @@
+// Sluggish flow from inlet stream
+RunStep(0)
+wait(350)
+
+{Feed1:SlugGenerationIsOn} = True
+{Feed1:SlugGasMassFraction} = 20
+{Feed1:SlugSize} = 6000
+{Feed1:SlugStdDeviation} = 4000
+
+{Feed2:SlugGenerationIsOn} = True
+{Feed2:SlugGasMassFraction} = 20
+{Feed2:SlugSize} = 6000
+{Feed2:SlugStdDeviation} = 4000

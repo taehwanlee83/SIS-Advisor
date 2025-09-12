@@ -1,0 +1,5 @@
+// Sep oil outlet plugging
+
+RunStep(0)
+wait(450)
+ramp({23MV0003_pf:Plugging}, 97, 600, 1)

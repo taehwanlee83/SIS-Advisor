@@ -1,0 +1,5 @@
+// Sep water outlet plugging
+
+RunStep(0)
+wait(400)
+ramp({23LV0001_pf:Plugging}, 50, 600, 0.1)

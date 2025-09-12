@@ -1,0 +1,30 @@
+// Normal operation which ends with tragedic accident
+SetActiveApp("/Tutorial/ProcessModel")
+//LoadConditions("Emulation_startingpoint","/Tutorial")
+//LoadConditions("Emulation2_startingpoint","/Tutorial")
+//LoadConditions("Emulation3_startingpoint","/Tutorial")
+LoadConditions("Emulation4_startingpoint","/Tutorial")
+
+
+
+SetSpeed(100)
+
+RunStep(0)
+wait(100)
+for(60)
+	{Feed1:InputPressure} = {Feed1:InputPressure} + 0.2
+	{Feed2:InputPressure} = {Feed2:InputPressure} - 0.2
+	wait(100)
+	{Feed1:InputPressure} = {Feed1:InputPressure} - 0.2
+	{Feed2:InputPressure} = {Feed2:InputPressure} + 0.2
+	wait(100)	
+end
+
+for(300)
+	{Feed1:InputPressure} = {Feed1:InputPressure} + 0.05
+	{Feed2:InputPressure} = {Feed2:InputPressure} + 0.05
+	wait(20)
+end
+
+wait(3600)
+Pause(0)

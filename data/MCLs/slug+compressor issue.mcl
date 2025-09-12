@@ -1,0 +1,21 @@
+// Sluggish flow from inlet stream + Compressor deterioration
+RunStep(0)
+wait(300)
+
+{Feed1:SlugGenerationIsOn} = True
+{Feed1:SlugGasMassFraction} = 20
+{Feed1:SlugSize} = 6000
+{Feed1:SlugStdDeviation} = 2000
+
+{Feed2:SlugGenerationIsOn} = True
+{Feed2:SlugGasMassFraction} = 20
+{Feed2:SlugSize} = 6000
+{Feed2:SlugStdDeviation} = 2000
+
+wait(600)
+
+ramp({23KA0001:Deterioration}, 70, 600, 0.02)
+
+wait(900)
+
+Pause(0)
