@@ -28,7 +28,7 @@ Tae Hwan Lee, Frank Ove Westad, Mary Ann Lundteigen (2025)
 Install all dependencies via:
 
 ```bash
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 ## ▶️ How to Run
