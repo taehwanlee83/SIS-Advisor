@@ -1,7 +1,4 @@
 pandas>=1.5
 numpy>=1.23
-matplotlib>=3.6
-seaborn>=0.12
-plotly>=5.10
 scikit-learn>=1.2
 imbalanced-learn>=0.10
