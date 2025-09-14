@@ -3,39 +3,21 @@ print('Initialization...', end='')
 import os
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import plotly.express as px
-import adapt as da
-import inspect
 import timeit
-import optuna
 
-from sklearn import preprocessing
-from sklearn import decomposition
-from sklearn import tree
 from sklearn import metrics
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import cross_val_score, StratifiedKFold, cross_validate, train_test_split, GridSearchCV, learning_curve, validation_curve
-from sklearn import pipeline
-from sklearn.inspection import DecisionBoundaryDisplay
-
-from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler, RobustScaler
-from sklearn.metrics import classification_report, RocCurveDisplay
+from sklearn.model_selection import train_test_split, GridSearchCV
 
 from imblearn import over_sampling as OS
 from imblearn import under_sampling as us
 from imblearn import ensemble as es
-from imblearn import metrics as imb_metrics
 from imblearn import combine as cmb
+from imblearn import metrics as imb_metrics    # Only if you want to get more info on class imbalance
 
 # Global variables
-full_size = (1920/100, 1080/100)
 RANDOM_SEED = 10
 MAX_ITER = 100
-DPI = 300
 
 scores = 'roc_auc'
 param_grid_original = {
@@ -135,7 +117,7 @@ def RFC(rs_method, *training):
             terminate_time = timeit.default_timer()
             print("Fitting time: %f secs" % (terminate_time-start_time))
     return None
-
+print('Done')
 ## File import
 
 print('File loading...', end='')
