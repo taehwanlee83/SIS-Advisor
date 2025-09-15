@@ -303,8 +303,6 @@ rs_method_list = ['none','us', 'os', 'osus', 'usos', 'es', 'bw']
 
 del df_original, df_sim_wo6, df_sim, df_test_input, df_test_label
 
-# PCA projection plot
-plot_pca_projection(original, sim, sim_wo6, df_test)
 
 # Fitting & recording
 
@@ -321,5 +319,7 @@ for rs_method in rs_method_list:
 		# Resampling/weighted methods ONLY on original (no simulation mixes)
         RFC(rs_method, original)
         
-
 f_exp.close()
+
+# PCA projection plot
+plot_pca_projection(original, sim, sim_wo6, df_test)
