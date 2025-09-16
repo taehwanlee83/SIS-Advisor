@@ -23,7 +23,7 @@ Tae Hwan Lee, Frank Ove Westad, Mary Ann Lundteigen (2025)
 - Python 3.10+
 - [scikit-learn](https://scikit-learn.org/)
 - [imbalanced-learn](https://imbalanced-learn.org/)
-- pandas, numpy, matplotlib, seaborn, plotly
+- pandas, numpy, matplotlib
 
 Install all dependencies via:
 
@@ -35,19 +35,20 @@ python3 -m pip install -r requirements.txt
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/taehwanlee83/SIS-Advisor.git
+git clone https://github.com/taehwanlee83/SIS-Advisor
 cd SIS-advisor
 ```
 2. Adjust the number of repetition, `MAX_ITER`, (default: 100) before you run.
-Starting with less than 10 is *STRONGLY* recommended since it will take some time for each repetition depending on your running environment.
-Check the code cautiously, since it will run *A LOT OF* fitting process until it ends.
+Starting with less than 10 (or just 1) is *STRONGLY* recommended since it will take some time for each repetition depending on your running environment.
+Each iteration contains 8 model training/testings: 3 none (on origianl, original+sim w/o 6, original+sim w/6) + 5 resampling/weighted (on original only) experiments.
+After running 1 by setting `MAX_ITER=1`, you can calculate how long 100 repeatitions will take using console log (fitting time).
 
 4. Run the main script:
 ```
 python3 code/Automated_SSB+IMB.py
 ```
 
-4. The script will generate `exp_result.csv` in the project root
+4. The script will generate `exp_result.csv` and `pca_projection.png` in the project root
 
 5. Make you own analysis using generated `exp_result.csv` file.
 
