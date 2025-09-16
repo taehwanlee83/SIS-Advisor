@@ -44,7 +44,7 @@ from imblearn import combine as cmb
 from imblearn.pipeline import Pipeline
 
 # Global variables
-MAX_ITER = 1
+MAX_ITER = 100
 
 os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["MKL_NUM_THREADS"] = "1"
