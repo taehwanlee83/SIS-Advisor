@@ -45,7 +45,7 @@ After running 1 by setting `MAX_ITER=1`, you can calculate how long 100 repeatit
 
 4. Run the main script:
 ```
-python3 code/Automated_SSB+IMB.py
+python code/Automated_SSB+IMB.py
 ```
 
 4. The script will generate `exp_result.csv` and `pca_projection.png` in the project root
