@@ -71,4 +71,4 @@ example bib
 
 This project is released under the MIT License.
 
-Note: K-SPICE® is a commercial tool by Kongsberg Digital. Original model files are not included.
+Note: K-SPICE® is a commercial tool by Kongsberg Digital AS. Original model files are not included.
