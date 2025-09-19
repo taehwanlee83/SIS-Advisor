@@ -420,20 +420,20 @@ def main():
 
 	# Fitting & recording
 	global f_exp
-	# f_exp = open(path + os.sep + 'exp_result.csv','w')
-	# f_exp.write('Loading and labeling completed in %f secs.\n' % (terminate_time - start_time))
-	# f_exp.write(', Samples, , , , Training, , , , , Test, , , , \n')
-	# f_exp.write(', n_orig, n_res, n_min_res, n_maj_res, ROC_AUC, TN, FP, FN, TP, ROC_AUC, TN, FP, FN, TP\n')
+	f_exp = open(path + os.sep + 'exp_result.csv','w')
+	f_exp.write('Loading and labeling completed in %f secs.\n' % (terminate_time - start_time))
+	f_exp.write(', Samples, , , , Training, , , , , Test, , , , \n')
+	f_exp.write(', n_orig, n_res, n_min_res, n_maj_res, ROC_AUC, TN, FP, FN, TP, ROC_AUC, TN, FP, FN, TP\n')
 
-	# for rs_method in rs_method_list:
-	# 	if rs_method == 'none':
-	# 		RFC('none', original)                 # Baseline
-	# 		RFC('none', *[sim_wo6, sim])          # SIM-GEN
-	# 	else:
-	# 		# Resampling/weighted methods ONLY on original (no simulation mixes)
-	# 		RFC(rs_method, original)
+	for rs_method in rs_method_list:
+		if rs_method == 'none':
+			RFC('none', original)                 # Baseline
+			RFC('none', *[sim_wo6, sim])          # SIM-GEN
+		else:
+			# Resampling/weighted methods ONLY on original (no simulation mixes)
+			RFC(rs_method, original)
 		
-	# f_exp.close()
+	f_exp.close()
 
 	# PCA projection plot
 	fig = pca_visualization(original, test, sim_wo6, sim)
