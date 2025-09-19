@@ -49,9 +49,9 @@ After running 1 by setting `MAX_ITER=1`, you can calculate how long 100 repeatit
 python Automated_SSB+IMB.py
 ```
 
-4. The script will generate `exp_result.csv` and `pca_projection.png` in the project root.
+4. The script will generate `exp_result.csv` in the project root. It should be noted that current file writing regime is to overwrite (`w`), not append. Every time you run, it will overwrite new `exp_result.csv`, and previous history will be erased. Save the previous history with different name if you want to keep the record.
 
-5. Make you own analysis using generated `exp_result.csv` file.
+5. Make you own analysis using generated `exp_result.csv` file. It should be noted that `csv` has limited functionality, so it is recommended to change in other form (e.g. xls).
 
 ## Data Availability
 
