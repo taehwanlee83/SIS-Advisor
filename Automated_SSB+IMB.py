@@ -1,5 +1,5 @@
 ## This is an automated report generation program to create file named "exp_result.csv".
-## Strongly recommend to check and change 'MAX_ITER' value before running the program. (Recommended value: 1~10)
+## Strongly recommend to check and change 'MAX_ITER' value before running the program. (Recommended testing value: 1~10)
 ## Each iteration contains 8 model training/testings: 3 none (on origianl, original+sim w/o 6, original+sim w/6) + 5 resampling/weighted (on original only) experiments.
 
 # MIT License
