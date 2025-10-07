@@ -1,5 +1,5 @@
 ## This is an automated report generation program to create file named "exp_result.csv".
-## Strongly recommend to check and change 'MAX_ITER' value before running the program. (Recommended testing value: 1~10)
+## Strongly recommend to check and change 'MAX_ITER' value before running the program. (Recommended value: 1~10)
 ## Each iteration contains 8 model training/testings: 3 none (on origianl, original+sim w/o 6, original+sim w/6) + 5 resampling/weighted (on original only) experiments.
 
 # MIT License
@@ -83,7 +83,7 @@ def get_resampled_counts(best_est, X, y, rs_method):
 		c = Counter(y)
 		return len(y), len(y), c.get(1,0), c.get(0,0)
 
-	if rs_method in ('os', 'us', 'osus'):
+	if rs_method in ('smote', 'adasyn', 'us', 'osus'):
 		sampler = best_est.named_steps.get('sampler', None)
 		if sampler is None:
 			c = Counter(y)
@@ -415,6 +415,7 @@ def main():
 	x_test = df_test_input; y_test = df_test_label
 
 	rs_method_list = ['none','us', 'smote', 'adasyn', 'osus', 'usos', 'es', 'bw']
+	# rs_method_list = ['smote', 'adasyn']
 
 	del df_original, df_sim_wo6, df_sim, df_test_input, df_test_label, df_test
 
@@ -430,7 +431,6 @@ def main():
 			RFC('none', original)                 # Baseline
 			RFC('none', *[sim_wo6, sim])          # SIM-GEN
 		else:
-			# Resampling/weighted methods ONLY on original (no simulation mixes)
 			RFC(rs_method, original)
 		
 	f_exp.close()
