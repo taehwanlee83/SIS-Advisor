@@ -1,8 +1,8 @@
-# Decision Support System for Safety Instrumented Systems for Unmanned Facilities Using Dynamic Process Simulation
+# An ML-based SIS advisor
 This repository provides the source code and processed datasets for the paper:
 
-**Decision Support System for Safety Instrumented Systems for Unmanned Facilities Using Dynamic Process Simulation**  
-Tae Hwan Lee, Frank Ove Westad, Mary Ann Lundteigen (2025)  
+**An ML-based SIS advisor: Tackling data imbalance and selection bias with SIM-GEN within the functional safety framework**  
+Tae Hwan Lee, Frank Ove Westad, Mary Ann Lundteigen (2026)  
 
 ---
 
@@ -44,7 +44,7 @@ Starting with less than 10 (or just 1) is *STRONGLY* recommended since it will t
 Each iteration contains 8 model training/testings: 3 none (on origianl, original+sim w/o 6, original+sim w/6) + 5 resampling/weighted (on original only) experiments.
 After running 1 by setting `MAX_ITER=1`, you can calculate how long 100 repeatitions will take using console log (fitting time).
 
-4. Run the main script:
+3. Run the main script:
 ```
 python Automated_SSB+IMB.py
 ```
@@ -65,7 +65,7 @@ Citation
 
 If you use this code or data, please cite:
 ```bibtex
-example bib
+An ML-based SIS advisor: Tackling data imbalance and selection bias with SIM-GEN within the functional safety framework (https://doi.org/10.1016/j.compchemeng.2026.109641)
 ```
 ## License
 
